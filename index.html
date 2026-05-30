@@ -257,4 +257,1637 @@ a {
 }
 
 .hero-buttons {
-  d
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 32px);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 17px);
+  min-height: 50px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0,180,216,0.4);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,180,216,0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 32px);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 17px);
+  min-height: 50px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.hero-stat span {
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,180,216,0.2);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  backdrop-filter: blur(10px);
+}
+
+.hero-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(16px, 2.5vw, 22px);
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-card-title span {
+  color: var(--primary);
+}
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.85);
+  font-size: clamp(13px, 1.8vw, 15px);
+}
+
+.service-list li::before {
+  content: '⚡';
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.hero-rating {
+  background: rgba(0,180,216,0.10);
+  border: 1px solid rgba(0,180,216,0.3);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stars {
+  color: var(--primary);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.rating-text {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.rating-text strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ===== SECTION COMMON ===== */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,180,216,0.1);
+  border: 1px solid rgba(0,180,216,0.3);
+  color: var(--primary-dark);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: 900;
+  color: var(--text-dark);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--primary);
+}
+
+.section-subtitle {
+  font-size: clamp(14px, 2vw, 17px);
+  color: var(--text-mid);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+section {
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background: var(--bg-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: clamp(280px, 40vw, 480px);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(80px, 12vw, 140px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,180,216,0.2), transparent);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  width: clamp(80px, 12vw, 110px);
+  height: clamp(80px, 12vw, 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #fff;
+}
+
+.about-badge strong {
+  font-size: clamp(16px, 2.5vw, 22px);
+  line-height: 1;
+}
+
+.about-badge span {
+  font-size: clamp(8px, 1.2vw, 11px);
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.feature-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.feature-item:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 24px;
+}
+
+.feature-item h4 {
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.feature-item p {
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  background: var(--bg-white);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 60px);
+}
+
+.services-header .section-subtitle {
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 28px);
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3vw, 32px);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(0,180,216,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 16px;
+  transition: background 0.2s;
+}
+
+.service-card:hover .service-card-icon {
+  background: rgba(0,180,216,0.2);
+}
+
+.service-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: rgba(0,180,216,0.08);
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,180,216,0.2);
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why {
+  background: linear-gradient(135deg, #0D0D1A 0%, #1B1B2F 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 90% 50%, rgba(0,180,216,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.why .section-title {
+  color: #fff;
+}
+
+.why .section-subtitle {
+  color: rgba(255,255,255,0.7);
+}
+
+.why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.why-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0,180,216,0.15);
+  border: 1px solid rgba(0,180,216,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.why-item-text h4 {
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(14px, 1.8vw, 16px);
+  margin-bottom: 4px;
+}
+
+.why-item-text p {
+  color: rgba(255,255,255,0.65);
+  font-size: clamp(12px, 1.5vw, 14px);
+  line-height: 1.6;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.why-card {
+  background: rgba(0,180,216,0.07);
+  border: 1px solid rgba(0,180,216,0.18);
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 3vw, 28px);
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.why-card:hover {
+  background: rgba(0,180,216,0.14);
+  transform: translateY(-3px);
+}
+
+.why-card-icon {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+
+.why-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.why-card p {
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  background: var(--bg-light);
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 60px);
+}
+
+.testimonials-header .section-subtitle {
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3vw, 32px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.testimonial-stars {
+  color: var(--primary);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 16px;
+  flex-shrink: 0;
+  border: 2px solid var(--primary);
+}
+
+.author-info h4 {
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.author-info span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* ===== HOURS + CONTACT ===== */
+.info-section {
+  background: #fff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.info-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.info-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(13px, 1.7vw, 15px);
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-item .day {
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.hours-item .time {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.hours-item .closed {
+  color: #E53E3E;
+  font-weight: 700;
+}
+
+.hours-item .open-badge {
+  background: rgba(0,180,216,0.1);
+  color: #0096B7;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,180,216,0.3);
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0,180,216,0.1);
+  border: 1px solid rgba(0,180,216,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-item-info h4 {
+  font-size: clamp(12px, 1.5vw, 13px);
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.contact-item-info a,
+.contact-item-info p {
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: color 0.2s;
+}
+
+.contact-item-info a:hover {
+  color: var(--primary);
+}
+
+.contact-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: clamp(14px, 1.8vw, 16px);
+  min-height: 50px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.cta-btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,180,216,0.35);
+}
+
+.cta-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,180,216,0.4);
+}
+
+.cta-btn-outline {
+  background: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.cta-btn-outline:hover {
+  background: var(--secondary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  background: linear-gradient(135deg, #0096B7 0%, #006D8A 100%);
+  padding: clamp(50px, 7vw, 80px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '⚡';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(120px, 20vw, 220px);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-inner h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.cta-inner p {
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-banner-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cta-white-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--primary-dark);
+  padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 36px);
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: clamp(14px, 2vw, 17px);
+  min-height: 52px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.cta-white-btn:hover {
+  background: var(--secondary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.cta-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+  padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 36px);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 17px);
+  min-height: 52px;
+  transition: all 0.2s;
+}
+
+.cta-outline-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0A0A14;
+  padding: clamp(50px, 7vw, 80px) 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(30px, 4vw, 50px);
+  padding-bottom: clamp(40px, 5vw, 60px);
+  border-bottom: 1px solid rgba(0,180,216,0.12);
+}
+
+.footer-brand h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-brand h3 span {
+  color: var(--primary);
+}
+
+.footer-brand p {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  background: rgba(0,180,216,0.08);
+  border: 1px solid rgba(0,180,216,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.footer-col h4 {
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: clamp(13px, 1.6vw, 14px);
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  padding: clamp(16px, 2.5vw, 24px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom p {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: rgba(255,255,255,0.4);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  font-size: clamp(12px, 1.5vw, 13px);
+  color: rgba(255,255,255,0.4);
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--primary);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  .hero-buttons .btn-secondary {
+    display: none;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-badge {
+    right: 16px;
+    bottom: -16px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-banner-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-white-btn,
+  .cta-outline-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero-stat strong {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .hero-stat span {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo-icon">⚡</div>
+    <div>Nogueira<span> Electric</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:+12034173749" class="nav-cta">📞 Call Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About Us</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:+12034173749">📞 Call (203) 417-3749</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Danbury's #1 Electrician</div>
+      <h1>Your Trusted <em>Electrical</em> Experts in Danbury, CT</h1>
+      <p class="hero-desc">Providing safe, reliable, and professional electrical services for residential and commercial properties throughout Danbury and surrounding areas. Licensed, insured, and available when you need us.</p>
+      <div class="hero-buttons">
+        <a href="tel:+12034173749" class="btn-primary">📞 Call (203) 417-3749</a>
+        <a href="https://maps.google.com/?q=53+Rowan+St,+Danbury,+CT+06810" target="_blank" class="btn-secondary">📍 Get Directions</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>5★</strong>
+          <span>Google Rating</span>
+        </div>
+        <div class="hero-stat">
+          <strong>10+</strong>
+          <span>Happy Reviews</span>
+        </div>
+        <div class="hero-stat">
+          <strong>100%</strong>
+          <span>Satisfaction</span>
+        </div>
+        <div class="hero-stat">
+          <strong>24/7</strong>
+          <span>Emergency Service</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">⚡ Our <span>Core Services</span></div>
+      <ul class="service-list">
+        <li>Residential Electrical Installations</li>
+        <li>Panel Upgrades & Replacements</li>
+        <li>Commercial Wiring & Repairs</li>
+        <li>Emergency Electrical Services</li>
+        <li>EV Charger Installations</li>
+        <li>Outlet & Switch Installations</li>
+        <li>Lighting Design & Installation</li>
+        <li>Safety Inspections & Code Work</li>
+      </ul>
+      <div class="hero-rating">
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="rating-text"><strong>5.0 / 5.0</strong> — Perfect Score</div>
+        </div>
+        <div class="rating-text">Based on <strong>10 verified reviews</strong> on Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-image">⚡</div>
+        <div class="about-badge">
+          <strong>5★</strong>
+          <span>Rated</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">⚡ About Us</div>
+        <h2 class="section-title">Passionate About <em>Safe</em> & Reliable Electrical Work</h2>
+        <p class="section-subtitle">Electrician Nogueira is a locally owned and operated electrical contracting company based in Danbury, CT. With years of hands-on experience and a commitment to excellence, we deliver top-quality electrical solutions tailored to your needs.</p>
+        <p style="font-size: clamp(13px, 1.7vw, 15px); color: var(--text-mid); line-height: 1.7;">From simple outlet replacements to full panel upgrades and commercial installations, our licensed electricians bring precision and professionalism to every job. We take pride in our perfect 5-star rating and the trust our community places in us.</p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">🏅</div>
+            <h4>Licensed & Insured</h4>
+            <p>Fully licensed electricians with comprehensive insurance coverage.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <h4>Fast Response</h4>
+            <p>Quick turnaround times for both scheduled and emergency calls.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">💰</div>
+            <h4>Fair Pricing</h4>
+            <p>Transparent, upfront pricing with no hidden fees or surprises.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🛡️</div>
+            <h4>Code Compliant</h4>
+            <p>All work performed to current NEC standards and local codes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">⚡ What We Do</div>
+      <h2 class="section-title">Professional <em>Electrical Services</em></h2>
+      <p class="section-subtitle">From routine maintenance to complex installations, we offer a full range of electrical services for homes and businesses throughout Danbury, CT and surrounding areas.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">🏠</div>
+        <h3>Residential Electrical</h3>
+        <p>Complete electrical services for homeowners including new installations, upgrades, repairs, and routine maintenance to keep your home safe and powered.</p>
+        <div class="service-tags">
+          <span class="tag">Wiring</span>
+          <span class="tag">Outlets</span>
+          <span class="tag">Switches</span>
+          <span class="tag">Lighting</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🏢</div>
+        <h3>Commercial Electrical</h3>
+        <p>Reliable electrical solutions for businesses, offices, and retail spaces. We minimize downtime and ensure your operations run without interruption.</p>
+        <div class="service-tags">
+          <span class="tag">Office Wiring</span>
+          <span class="tag">Lighting</span>
+          <span class="tag">Panels</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⚡</div>
+        <h3>Panel Upgrades</h3>
+        <p>Upgrade your outdated electrical panel to handle modern power demands safely. We install top-brand panels and ensure proper load balancing.</p>
+        <div class="service-tags">
+          <span class="tag">200 Amp</span>
+          <span class="tag">400 Amp</span>
+          <span class="tag">Sub-panels</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🚨</div>
+        <h3>Emergency Services</h3>
+        <p>Electrical emergencies don't wait for business hours. We offer prompt emergency electrical services to restore power and address safety hazards quickly.</p>
+        <div class="service-tags">
+          <span class="tag">24/7</span>
+          <span class="tag">Fast Response</span>
+          <span class="tag">Power Outage</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🔌</div>
+        <h3>EV Charger Installation</h3>
+        <p>Future-proof your home or business with a professional Level 2 EV charger installation. We handle all permits and inspections for a seamless experience.</p>
+        <div class="service-tags">
+          <span class="tag">Level 2</span>
+          <span class="tag">Tesla</span>
+          <span class="tag">Universal</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">💡</div>
+        <h3>Lighting Design & Install</h3>
+        <p>Transform your space with expert lighting installations including recessed lights, LED retrofits, outdoor lighting, and smart lighting systems.</p>
+        <div class="service-tags">
+          <span class="tag">LED</span>
+          <span class="tag">Recessed</span>
+          <span class="tag">Outdoor</span>
+          <span class="tag">Smart</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content">
+        <div class="section-label" style="background: rgba(0,180,216,0.15); border-color: rgba(0,180,216,0.4); color: var(--accent);">⚡ Why Choose Us</div>
+        <h2 class="section-title" style="color: #fff;">The Nogueira <em>Difference</em></h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">When you hire Electrician Nogueira, you're choosing a team that genuinely cares about your safety and satisfaction. Here's what sets us apart.</p>
+        <ul class="why-list">
+          <li>
+            <div class="why-icon">🏅</div>
+            <div class="why-item-text">
+              <h4>Fully Licensed & Insured</h4>
+              <p>Every job is performed by licensed professionals with full liability and workers' compensation coverage for your peace of mind.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">💬</div>
+            <div class="why-item-text">
+              <h4>Clear Communication</h4>
+              <p>We explain everything upfront — no jargon, no surprises. You'll always know exactly what work needs to be done and why.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">✅</div>
+            <div class="why-item-text">
+              <h4>Satisfaction Guaranteed</h4>
+              <p>We stand behind our work 100%. If you're not completely satisfied, we'll make it right — no questions asked.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">🌟</div>
+            <div class="why-item-text">
+              <h4>5-Star Track Record</h4>
+              <p>Our perfect 5-star Google rating speaks for itself. We've built our reputation on consistent quality and customer care.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="why-card-icon">⭐</div>
+          <h3>5.0</h3>
+          <p>Google Rating</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">👥</div>
+          <h3>10+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">⚡</div>
+          <h3>100%</h3>
+          <p>Code Compliant</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🛡️</div>
+          <h3>24/7</h3>
+          <p>Emergency Ready</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-label">⭐ Reviews</div>
+      <h2 class="section-title">What Our <em>Customers</em> Say</h2>
+      <p class="section-subtitle">Don't just take our word for it. Here's what real customers have to say about their experience with Electrician Nogueira.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Nogueira Electric did an outstanding job upgrading our electrical panel. They were professional, on time, and cleaned up everything when they were done. I highly recommend them to anyone in Danbury looking for a reliable electrician."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div class="author-info">
+            <h4>Michael Rodriguez</h4>
+            <span>Panel Upgrade — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Called them for an emergency situation — lights kept flickering and I smelled something burning. They came within an hour, diagnosed the problem immediately, and fixed it safely. I was so relieved. Excellent service!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SL</div>
+          <div class="author-info">
+            <h4>Sandra Liu</h4>
+            <span>Emergency Service — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Had an EV charger installed in my garage. The team was knowledgeable and walked me through the entire process. Installation was clean and efficient. My Tesla charges perfectly every night. Worth every penny!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JP</div>
+          <div class="author-info">
+            <h4>James Patterson</h4>
+            <span>EV Charger Install — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Hired Nogueira for new recessed lighting throughout our living room and kitchen. The results are beautiful and the price was very fair. They respected our home, protected the floors, and finished ahead of schedule."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div class="author-info">
+            <h4>Angela Martinez</h4>
+            <span>Lighting Installation — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Our office needed a complete electrical overhaul and Nogueira delivered. Professional, efficient, and the communication was excellent throughout. They even helped us save money by suggesting more efficient solutions."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DK</div>
+          <div class="author-info">
+            <h4>David Kim</h4>
+            <span>Commercial Wiring — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Best electrician I've used in Danbury by far. Honest, skilled, and truly cares about doing the job right. Fixed a wiring issue that two other electricians couldn't figure out. I won't call anyone else from now on!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">TC</div>
+          <div class="author-info">
+            <h4>Teresa Collins</h4>
+            <span>Wiring Repair — Danbury, CT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS + CONTACT -->
+<section class="info-section" id="contact">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: clamp(36px, 5vw, 60px);">
+      <div class="section-label">📍 Find Us</div>
+      <h2 class="section-title">Business Hours & <em>Contact Info</em></h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Ready to help you with all your electrical needs. Reach out today for a free estimate!</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3 class="info-card-title">🕐 Business Hours</h3>
+        <ul class="hours-list">
+          <li class="hours-item">
+            <span class="day">Monday</span>
+            <span class="time">7:00 AM – 6:00 PM <span class="open-badge">Open</span></span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Tuesday</span>
+            <span class="time">7:00 AM – 6:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Wednesday</span>
+            <span class="time">7:00 AM – 6:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Thursday</span>
+            <span class="time">7:00 AM – 6:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Friday</span>
+            <span class="time">7:00 AM – 6:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Saturday</span>
+            <span class="time">8:00 AM – 4:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="day">Sunday</span>
+            <span class="closed">Closed</span>
+          </li>
+        </ul>
+        <div style="margin-top: 20px; padding: 14px; background: rgba(0,180,216,0.08); border: 1px solid rgba(0,180,216,0.2); border-radius: 10px; font-size: clamp(12px, 1.5vw, 14px); color: var(--text-mid);">
+          ⚡ <strong style="color: var(--text-dark);">24/7 Emergency Service Available</strong> — Call us anytime for urgent electrical issues.
+        </div>
+      </div>
+      <div class="info-card">
+        <h3 class="info-card-title">📞 Contact Us</h3>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-info">
+              <h4>Phone</h4>
+              <a href="tel:+12034173749">(203) 417-3749</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-info">
+              <h4>Address</h4>
+              <p>53 Rowan St, Danbury, CT 06810</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⭐</div>
+            <div class="contact-item-info">
+              <h4>Google Rating</h4>
+              <p>5.0 / 5.0 — 10 Reviews</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🏅</div>
+            <div class="contact-item-info">
+              <h4>License</h4>
+              <p>Licensed & Insured in CT</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-cta-buttons">
+          <a href="tel:+12034173749" class="cta-btn cta-btn-primary">📞 Call Now — (203) 417-3749</a>
+          <a href="https://maps.google.com/?q=53+Rowan+St,+Danbury,+CT+06810" target="_blank" class="cta-btn cta-btn-outline">📍 Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Ready to Get Started?</h2>
+      <p>Contact Electrician Nogueira today for a free estimate. Professional, reliable, and affordable electrical services in Danbury, CT and surrounding areas.</p>
+      <div class="cta-banner-buttons">
+        <a href="tel:+12034173749" class="cta-white-btn">📞 Call (203) 417-3749</a>
+        <a href="https://maps.google.com/?q=53+Rowan+St,+Danbury,+CT+06810" target="_blank" class="cta-outline-btn">📍 Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>⚡ Nogueira <span>Electric</span></h3>
+        <p>Your trusted local electrician in Danbury, CT. Licensed, insured, and committed to providing safe, reliable, and professional electrical services for residential and commercial clients.</p>
+        <div class="footer-social">
+          <div class="social-link">📘</div>
+          <div class="social-link">📸</div>
+          <div class="social-link">🐦</div>
+          <div class="social-link">⭐</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Residential Electrical</a></li>
+          <li><a href="#services">Commercial Electrical</a></li>
+          <li><a href="#services">Panel Upgrades</a></li>
+          <li><a href="#services">Emergency Services</a></li>
+          <li><a href="#services">EV Charger Install</a></li>
+          <li><a href="#services">Lighting Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tel:+12034173749">Call Now</a></li>
+          <li><a href="https://maps.google.com/?q=53+Rowan+St,+Danbury,+CT+06810" target="_blank">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Electrician Nogueira. All rights reserved. | 53 Rowan St, Danbury, CT 06810 | (203) 417-3749</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+  function closeMenu() {
+    var menu = document.getElementById('mobileMenu');
+    menu.classList.remove('open');
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href.length > 1) {
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          var offset = 70;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
